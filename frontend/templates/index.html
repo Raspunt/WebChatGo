@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style_index.css">
+    <title>Chat lite</title>
+</head>
+
+<body>
+
+    <div class="container p-5 ">
+
+ 
+        <div class="bg-warning ">
+
+
+
+            <div class=" p-2">
+                {{ range $mes := .list }}
+
+                <h3 class="bg-secondary p-2 m-3 "> пользователь {{ $mes.USERNAME }} написал: {{ $mes.TEXT }} </h3>
+
+
+
+
+
+
+                {{ end }}
+            </div>
+
+            <form class="p-3" action="" method="post">
+                <input name="textInput" value="" class="form-control" placeholder="Enter message">
+                <button type="submit" class="btn btn-primary col">Send</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
